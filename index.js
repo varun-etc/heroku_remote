@@ -8,12 +8,33 @@ throng({
   lifetime: Infinity
 }, start)
 
+	process.env.COMMUNITY_URL = process.env.COMMUNITY_URL || 'https://preprod19-secommunities.cs17.force.com/ckmContent';
+	process.env.BFO_FEEDBACKOBJ_RECORDTYPEID = process.env.BFO_FEEDBACKOBJ_RECORDTYPEID || '012g00000006YoKAAU';
+	process.env.MAX_FETCH = process.env.MAX_FETCH || 50000;
+	process.env.MEMCACHE_EXPIRY = process.env.MEMCACHE_EXPIRY || 36000;
+	process.env.ALLOWED_ORIGNS = process.env.ALLOWED_ORIGNS || "http://localhost:5000";
+
+	process.env.GCAPTCHA_SECRET = process.env.GCAPTCHA_SECRET || '6LcBYf8UAAAAAAbPh9Qffvvaql0utLfYoh7Ty7KY';
+	process.env.GCAPTCHA_URL = process.env.GCAPTCHA_URL || 'https://www.google.com/recaptcha/api/siteverify?';
+	//memcache preprod
+	process.env.MEMCACHEDCLOUD_SERVERS = 'memcached-11561.c114.us-east-1-4.ec2.cloud.redislabs.com:11561';
+	process.env.MEMCACHEDCLOUD_USERNAME = 'memcached-app174990142';
+	process.env.MEMCACHEDCLOUD_PASSWORD = 'VKfZjsCtSlakHssGhGi5yEGyBj54nhhT';
+	
+/*	
 var logger = require('logzio-nodejs').createLogger({
 	token: process.env.LOGZIO_ACCESS_TOKEN,
 	protocol: process.env.LOGZIO_PROTOCOL,
 	host: process.env.LOGZIO_HOST,
 	port: process.env.LOGZIO_PORT,
 	type: process.env.LOGZIO_EVENT_TYPE
+});*/
+var logger = require('logzio-nodejs').createLogger({
+  token: 'tjoqQOceiNlYOItTYwKbWLbsteMkPyxc',
+  protocol: 'http',
+  host: 'listener.logz.io',
+  port: '8070',
+  type: 'API-LG'
 });
 
 function start(){
