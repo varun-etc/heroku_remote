@@ -38,6 +38,7 @@ var logger = require('logzio-nodejs').createLogger({
 });
 
 function start(){
+	console.log("called start!!!!");
 	var _ = require('underscore')
 	var express = require('express')
 	var bodyParser = require('body-parser')
