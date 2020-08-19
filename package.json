@@ -14,13 +14,13 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "filesize": "^6.1.0",
-    "jsforce": "^1.9.3",	
+    "jsforce": "^1.9.3",
     "memjs": "^1.2.2",
     "moment": "^2.25.3",
-	  "request": "^2.88.2",
+    "request": "^2.88.2",
     "throng": "^4.0.0",
     "underscore": "^1.10.2",
-	  "async": "^3.2.0",
-    "logzio-nodejs":"^2.0.1"
+    "async": "^3.2.0",
+    "logzio-nodejs": "^2.0.1"
   }
 }
